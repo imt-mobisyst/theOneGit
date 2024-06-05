@@ -1,5 +1,10 @@
 # Ring Parameters :
 
+# ring features
+if [ ! -d "${RING_HOME}/tmp" ]; then
+  mkdir ${RING_HOME}/tmp
+fi
+
 # tunned environment
 export PATH=$PATH:$RING_HOME/bin
 

@@ -1,0 +1,19 @@
+#!/usr/bin/python3
+import sys
+import mycmd
+
+parameters= [
+	mycmd.Parameter( 'repo', 'r', 1 )
+]
+
+valid, parameters, arguments= mycmd.parseParameters( parameters, sys.argv, 0 )
+
+if valid :
+
+	msg= "'wip'"
+	if len(arguments) > 0 :
+		msg= '"'+ ' '.join( arguments ) +'"'
+	mycmd.execute( "git commit -am "+ msg )
+	mycmd.execute( "git pull" )
+
+exit()

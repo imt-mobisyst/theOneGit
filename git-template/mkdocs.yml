@@ -1,0 +1,8 @@
+site_name: Robot-IA HdF
+nav:
+  - Home: 'index.md'
+  - F.A.Q: 'faq.md'
+extra_css:
+  - style.css
+markdown_extensions:
+  - attr_list

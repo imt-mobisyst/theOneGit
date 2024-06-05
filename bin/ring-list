@@ -1,0 +1,8 @@
+#!/usr/bin/python3
+import sys, ring
+
+target= []
+if len( sys.argv ) > 1 :
+    target= sys.argv[1:]
+gits= ring.makeList(target)
+print( ring.string(gits) )
