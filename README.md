@@ -1,6 +1,6 @@
-# Ring: A project to rule them all
+# the OneRing: A project to rule them all
 
-_Ring_ is mainly designed to manage a collection of git repos.
+_One Ring_ is mainly designed to manage recursivelly a collection of git repos.
 
 ## Get-stated:
 
