@@ -1,8 +1,5 @@
-import sys,os,socket,re
-import mycmd, ring
-
-def __init__( self ) :
-	self.list= {}
+import os, re
+from . import cmd
 
 class Git :
 	def __init__(self, path) :
@@ -33,7 +30,7 @@ def loadList( fileName ):
 		if patern.match(line) :
 			git.addRemote( repo[1], repo[2] )
 		else :
-			git= ring.Git( line[:-1] )
+			git= Git( line[:-1] )
 			gits.append( git )
 
 	return gits
@@ -47,7 +44,7 @@ def makeList( decendents= [] ):
 		return son not in forbidden and os.path.isdir( son_path ) and son[0] != '.'
 
 	if len( decendents ) == 0 :
-		decendents= mycmd.query( 'ls .' )
+		decendents= cmd.query( 'ls .' )
 	
 	for son in decendents :
 		son_path = './'+ son
@@ -56,19 +53,19 @@ def makeList( decendents= [] ):
 
 	while len(dirs) > 0 :
 		elt = dirs.pop(0) # for each directory
-		decendents= mycmd.query( 'ls -a "'+ elt + '"' )
+		decendents= cmd.query( 'ls -a "'+ elt + '"' )
 		#print( "> visit: "+ elt )
 
 		# test if it is a git repo
 		if ".git" in decendents and os.path.isdir( elt+"/.git" ) :
 			git= Git( elt[2:] )
-			remotes= mycmd.query( 'git -C "'+ elt + '" remote' )
+			remotes= cmd.query( 'git -C "'+ elt + '" remote' )
 			for name in remotes :
-				url= mycmd.query( 'git -C "'+ elt + '" remote get-url '+ name )[0]
+				url= cmd.query( 'git -C "'+ elt + '" remote get-url '+ name )[0]
 				git.addRemote(name, url)
 				#print('#  - '+name+': '+ url  )
 			gits.append( git )
-			decendents= mycmd.query( 'ls -a "'+ elt + '"' )
+			decendents= cmd.query( 'ls -a "'+ elt + '"' )
 
 		else :
 			# Add decendents directories to process list
@@ -85,5 +82,5 @@ def directories( gits ):
 	dirs= [ g.path for g in gits ]
 	return dirs
 
-def string( gits ):
-	return '\n'.join( [ str(g) for g in gits ] )
+def stringList( aList ):
+	return '\n'.join( [ str(elt) for elt in aList ] )

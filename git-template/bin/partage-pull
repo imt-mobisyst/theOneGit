@@ -1,4 +1,0 @@
-#!/bin/bash
-
-rsync --iconv=utf8 --exclude=".*" -azv shared-partage
-

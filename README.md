@@ -21,3 +21,7 @@ source \$RING_HOME/run-commands.sh
 """ >> ~/.bashrc
 source ~/.bashrc
 ```
+
+## Board: 
+
+- get a look at: subcommand
