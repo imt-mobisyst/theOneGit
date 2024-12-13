@@ -20,7 +20,7 @@ classifiers = [
 ]
 
 [project.scripts]
-op = "oneProject:__main__.commandHandler"
+one = "oneProject:__main__.commandHandler"
 
 [project.urls]
 Homepage = "https://imt-mobisyst.github.io/"
