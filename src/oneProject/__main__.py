@@ -1,5 +1,6 @@
 import sys
 from . import actions
+from .complete import doComplete
 
 def commandHandler():
     action= "help"
@@ -8,11 +9,12 @@ def commandHandler():
         action= sys.argv[1]
         arguments= sys.argv[1:]
     
-    if action not in actions.keys() :
-        action= "help"
-    
-    actions[action]( arguments )
-    
+    if action == 'complete' :
+        doComplete( arguments )
+    elif action in actions.keys() :
+        actions[action]( arguments )
+    else :
+        actions["help"]( arguments )
     return 1
 
 def commandComplete():

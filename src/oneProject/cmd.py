@@ -7,9 +7,9 @@ Created on Feb 13 2019
 import os, sys, re
 
 # Environment :
-#rootDir= "" #os.environ['RING_HOME']
+rootDir= os.environ['HOME']
 #shareDir= rootDir + "/share"
-tmpDir= "/home/guillaume/.ring/tmp"
+tmpDir= rootDir+"/.one/tmp"
 
 # Parameters :
 class Parameter :

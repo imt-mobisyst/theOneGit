@@ -21,9 +21,9 @@ We recommand to set set an environnement variable `$ONE_PROJECT` with the path t
 
 ```bash
 echo """
-# Ring
+# The One Project
 export ONE_PROJECT=/home/you/path/to/oneProject
-source \$RING_HOME/run-commands.bash
+source \$ONE_PROJECT/run-commands.bash
 """ >> ~/.bashrc
 source ~/.bashrc
 ```

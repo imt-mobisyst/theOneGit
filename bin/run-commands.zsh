@@ -1,3 +1,9 @@
+# bash completion:
 autoload bashcompinit                    
 bashcompinit
-complete -C "python3 -c 'from oneProject.__main__ import commandComplete; commandComplete()'" one
+
+_completion_loader_one()
+{
+    one complete $3 $2
+}
+complete -df -F _completion_loader_one one

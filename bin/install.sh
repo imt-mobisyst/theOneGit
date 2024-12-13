@@ -12,11 +12,11 @@ pip install .
 echo """
 # OneProject
 export ONE_PROJECT=$ONEPATH
-source \$ONE_PROJECT/run-commands.bash
+source \$ONE_PROJECT/bin/run-commands.bash
 """ >> ~/.bashrc
 
 echo """
 # OneProject
 export ONE_PROJECT=$ONEPATH
-source \$ONE_PROJECT/run-commands.zsh
+source \$ONE_PROJECT/bin/run-commands.zsh
 """ >> ~/.zshrc
