@@ -1,5 +1,13 @@
 import os, pathlib
-from . import git, cmd
+from . import complete, git, cmd
+
+def doHelp( arguments ):
+	print( "help" )
+
+actions= {
+	"help": doHelp,
+	"complete": complete.doComplete
+}
 
 def doList( arguments ):
     target= []
@@ -7,6 +15,25 @@ def doList( arguments ):
         target= arguments[1:]
     gits= git.makeList(target)
     print( git.stringList(gits) )
+
+actions["list"]= doList
+
+def doDo( arguments ):
+    RED= '\033[0;31m'
+    LIGHT= '\033[1;34m'
+    NC= '\033[0m' # No Color
+
+    rootPath= pathlib.Path().absolute()
+    gits= git.makeList()
+    command= ' '.join(arguments[1:])
+
+    for depot in gits :
+        os.chdir( depot.path )
+        print( RED + '> ' + LIGHT + depot.path + NC)
+        cmd.execute( command, verbose=False )
+        os.chdir( rootPath )
+
+actions["do"]= doDo
 
 def doStatus(arguments):
     RED= '\033[0;31m'
@@ -23,3 +50,4 @@ def doStatus(arguments):
         cmd.execute( command, verbose=False )
         os.chdir( rootPath )
 
+actions["status"]= doStatus
