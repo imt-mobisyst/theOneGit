@@ -91,12 +91,13 @@ class Page() :
 #onlyfiles = [f for f in listdir(mypath) if isfile(join(mypath, f))]
 
 def loadTag( projectDir="/home/guillaume/Commands" ):
-    tag=  []meuilleur
-            print( f"\t{file} ?" )
+    tag=  []
+    dir= projectDir + "/html-part"
+    if os.path.isdir( dir ) :
+        for file in os.listdir( dir ) :
             t= re.search('(.*).tag.html', file)
             if( t ):
                 tag.append( t.group(1) )
-
     return tag
 
 def readTag(tag, projectDir="/home/guillaume/Commands" ) :
