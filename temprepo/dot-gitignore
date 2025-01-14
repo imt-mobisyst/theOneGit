@@ -1,0 +1,64 @@
+draft.c
+draft
+
+# Submodules
+#-----------------
+libbbmm
+wraps-python
+wraps-pharo
+wraps-cpp
+
+# Generated
+#-----------------
+build
+bbmm.h
+libbbmm.so
+run-test-BbMm
+site
+
+# System
+#-----------------
+*.log
+.vscode
+build
+dpd
+external
+lost+found
+*~
+~*
+
+# Latex:
+#-----------------
+*.aux
+*.bbl
+*.bcf
+*.blg
+*.fdb_latexmk
+*.fls
+*.log
+*.out
+*.run.xml
+*.spl
+*.synctex.gz
+*.tex~
+
+# python:
+#-----------------
+*.pyc
+__pycache__/
+
+# c/c++:
+#-----------------
+*.o
+
+# pharo:
+#-----------------
+pharo
+pharo-ui
+pharo-vm
+pharo-local
+PharoDebug.log
+*.sources
+*.changes
+
+
