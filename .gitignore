@@ -1,28 +1,17 @@
-draft.c
-draft
 
 # Submodules
 #-----------------
-libbbmm
-wraps-python
-wraps-pharo
-wraps-cpp
 
 # Generated
 #-----------------
-build
-bbmm.h
-libbbmm.so
-run-test-BbMm
-site
+build/
+site/
 
 # System
 #-----------------
 *.log
 .vscode
-build
-dpd
-external
+external/
 lost+found
 *~
 ~*
@@ -50,15 +39,4 @@ __pycache__/
 # c/c++:
 #-----------------
 *.o
-
-# pharo:
-#-----------------
-pharo
-pharo-ui
-pharo-vm
-pharo-local
-PharoDebug.log
-*.sources
-*.changes
-
 
