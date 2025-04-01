@@ -18,7 +18,7 @@ Use a `one` file to contextualize one command execution
 
 ## Clean language:
 
-Return on Pharo ?
+Go on Pharo ?
 
 
 ## Templated files
