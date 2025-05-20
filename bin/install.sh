@@ -8,15 +8,14 @@ cd `dirname $0`/..
 pip install .
 
 # setup shell environment
-
 echo """
-# OneProject
-export ONE_PROJECT=$ONEPATH
-source \$ONE_PROJECT/bin/run-commands.bash
+# TheOneGit
+export ONE_GIT=$ONEPATH
+source \$ONE_GIT/bin/run-commands.bash
 """ >> ~/.bashrc
 
 echo """
-# OneProject
-export ONE_PROJECT=$ONEPATH
-source \$ONE_PROJECT/bin/run-commands.zsh
+# TheOneProject
+export ONE_GIT=$ONEPATH
+source \$ONE_GIT/bin/run-commands.zsh
 """ >> ~/.zshrc

@@ -1,14 +1,14 @@
-# The One Project: A project to rule them all
+# The One Git-project: A project to rule them all
 
-_One Project_ is mainly designed to manage recursivelly a collection of git repos.
+_The One Git_ is mainly designed to manage recursivelly a collection of git repos.
 
 ## Get-stated:
 
 ```bash
-git clone https://github.com/imt-mobisyst/oneProject
-oneProject/bin/instal.sh
+git clone https://github.com/imt-mobisyst/theOneGit
+theOneGit/bin/instal.sh
 # in a fresh new shell:
-one help
+tog help
 ```
 
 ## Manual install...
@@ -21,8 +21,8 @@ We recommand to set set an environnement variable `$ONE_PROJECT` with the path t
 
 ```bash
 echo """
-# The One Project
-export ONE_PROJECT=/home/you/path/to/oneProject
+# The One Git
+export ONE_GIT=/home/you/path/to/theOneProject
 source \$ONE_PROJECT/run-commands.bash
 """ >> ~/.bashrc
 source ~/.bashrc
