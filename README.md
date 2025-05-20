@@ -15,15 +15,15 @@ tog help
 
 Install commands tools with pip.
 
-We recommand to set set an environnement variable `$ONE_PROJECT` with the path to your `oneProject` directory and to source the `bin/run-commands` in your favorit shell' run-commands file (`~/.bashrc` for bash).
+We recommand to set set an environnement variable `$THE_ONE_GIT` with the path to your `theOneGit` directory and to source the `bin/run-commands` in your favorit shell' run-commands file (`~/.bashrc` for bash).
 
 `bash` for instance:
 
 ```bash
 echo """
 # The One Git
-export ONE_GIT=/home/you/path/to/theOneProject
-source \$ONE_PROJECT/run-commands.bash
+export THE_ONE_GIT=/home/you/path/to/theOneGit
+source \$THE_ONE_GIT/run-commands.bash
 """ >> ~/.bashrc
 source ~/.bashrc
 ```

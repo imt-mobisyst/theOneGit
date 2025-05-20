@@ -7,12 +7,12 @@
 - [ ] marp doc
 
 
-## Local one:
+## Local tog:
 
-Use a `one` file to contextualize one command execution
+Use a `tog` file to contextualize one command execution
 
 - [ ] Recursive solution.
-- [ ] config.toml (for one) or config.one
+- [ ] config.toml (for tog) or config.tog
 - [ ] 
 
 

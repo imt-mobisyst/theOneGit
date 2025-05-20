@@ -10,12 +10,12 @@ pip install .
 # setup shell environment
 echo """
 # TheOneGit
-export ONE_GIT=$ONEPATH
-source \$ONE_GIT/bin/run-commands.bash
+export THE_ONE_GIT=$ONEPATH
+source \$THE_ONE_GIT/bin/run-commands.bash
 """ >> ~/.bashrc
 
 echo """
-# TheOneProject
-export ONE_GIT=$ONEPATH
-source \$ONE_GIT/bin/run-commands.zsh
+# TheOneGit
+export THE_ONE_GIT=$ONEPATH
+source \$THE_ONE_GIT/bin/run-commands.zsh
 """ >> ~/.zshrc

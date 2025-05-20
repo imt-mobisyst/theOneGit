@@ -4,5 +4,5 @@ import sys
 print("Test...")
 
 sys.path.insert( 1, __file__.split('bin')[0] )
-from src.oneProject.__main__ import commandHandler
+from src.theOneGit.__main__ import commandHandler
 commandHandler()

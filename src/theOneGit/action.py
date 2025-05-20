@@ -1,8 +1,11 @@
 import os, pathlib
 from . import complete, git, cmd
 
+actions= {}
+
 def doHelp( arguments ):
-	print( "help" )
+	print( f"-- help --" )
+	print( ", ".join( [str(a) for a in actions ] ) ) 
 
 actions= {
 	"help": doHelp,

@@ -9,7 +9,7 @@ import os, sys, re
 # Environment :
 rootDir= os.environ['HOME']
 #shareDir= rootDir + "/share"
-tmpDir= rootDir+"/.one/tmp"
+tmpDir= rootDir+"/.tog/tmp"
 
 # Parameters :
 class Parameter :
