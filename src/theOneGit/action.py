@@ -2,15 +2,16 @@ import os, pathlib
 from . import complete, git, cmd
 
 actions= {}
+def register( actionName, actionFunction ):
+    global actions
+    actions[actionName]= actionFunction
 
 def doHelp( arguments ):
 	print( f"-- help --" )
 	print( ", ".join( [str(a) for a in actions ] ) ) 
 
-actions= {
-	"help": doHelp,
-	"complete": complete.doComplete
-}
+register( "help", doHelp )
+register( "complete", complete.doComplete )
 
 def doList( arguments ):
     target= []

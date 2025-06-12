@@ -1,4 +1,4 @@
-from . import action
+from . import action, actionClone
 import sys
 
 def commandHandler():
