@@ -8,7 +8,7 @@ A `tog` subcommand like do or list is an action in `tog` environment.
 ## Set-up a new action.
 
 So, first create a source file for your new action. 
-For instance, create the file `actionExemple.py` into the `src/theOneGit` directory.
+For instance, create the file `actionExemple.py` into the `src/theonegit` directory.
 The `actionExemple.py` include at least $2$ element: the function to process and a registration with a action name.
 
 ```python

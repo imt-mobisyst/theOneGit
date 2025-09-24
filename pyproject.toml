@@ -3,24 +3,22 @@ requires = ["hatchling"]
 build-backend = "hatchling.build"
 
 [project]
-name = "theOneGit"
+name = "theonegit"
 version = "0.0.1"
 authors = [
   { name="Guillaume Lozenguez", email="guillaume.lozenguez@imt-nord-europe.fr" },
 ]
 description = "A git-project to rule them all"
-readme = "README.md"
 requires-python = ">=3.8"
-keywords = ["the one", "git", "project manager"]
-license = {text = "BSD-3-Clause"}
 classifiers = [
     "Programming Language :: Python :: 3",
     "License :: OSI Approved :: MIT License",
     "Operating System :: POSIX :: Linux"
 ]
+readme = "README.md"
 
 [project.scripts]
-tog = "theOneGit:__main__.commandHandler"
+tog = "theonegit:__main__.commandHandler"
 
 [project.urls]
 Homepage = "https://imt-mobisyst.github.io/"
